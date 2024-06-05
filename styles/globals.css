@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+nav {
+  @apply flex gap-4 items-center
+ }
+
+.nav_item {
+  @apply text-lg font-bold text-orange-50 hover:scale-[1.1] duration-200
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid #dda845;
+  border-radius: 5px;
+  min-height: 45vh;
+  transition: 200ms;
+  box-shadow: #d8ceb6 1px 2px 3px 2px;
+}
+
+.card:hover {
+  transform: translateY(-1px);
+}
+
+.admin_card {
+  @apply flex flex-col my-5 p-5 border-b-2 border-b-slate-500 
+  rounded-md shadow-md hover:scale-[1.01] duration-300
+}
+
+.card-des {
+  @apply h-full flex flex-col justify-between p-2;
+}
+.card-des h2 {
+  @apply text-orange-500 rounded font-semibold 
+  bg-gradient-to-r from-[#f4efe3] via-[#f5e2bf] to-[#fcd895] 
+  pl-1 border-l-2 border-l-orange-400;
+}
+
+.b-section {
+  @apply flex flex-col justify-between px-4 mb-4 items-center lg:flex-row;
+}
+
+.pbutton {
+  @apply outline-none rounded-md bg-orange-600 flex justify-center items-center gap-2
+         text-white p-[2px] hover:bg-orange-700 duration-200 
+
+         lg:w-[50%] md:w-full w-[100%];
+}
+
+/* focus button */
+/* focus:bg-orange-900 */
+
+/* .card {
+  @apply min-h-[45vh] bg-[#faf5eb] border-b-orange-500 shadow-md hover:translate-y-[-1px] duration-200
+} */
+
+.dropdown-link {
+  @apply flex p-2 text-orange-700 text-[17px] bg-white hover:bg-orange-100
+}
+
+.alert-error{
+  @apply my-3 rounded-lg bg-red-100 p-3 text-red-800;
+}
+
+.alert-success {
+  @apply m-3 rounded-lg bg-green-100 p-3 text-green-700;
+}
+
+.bg_login {
+  background-image: url("https://images.pexels.com/photos/4021955/pexels-photo-4021955.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  object-position: center;
+  object-fit: cover;
+}
